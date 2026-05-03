@@ -100,13 +100,21 @@ export default function HomePage() {
             <Link href="#auditoria" className="btn btn-ghost">
               Auditar mi sitio actual gratis
             </Link>
+            {/* Mini-stats trust bar */}
+            <div className="flex w-full flex-wrap items-center gap-x-6 gap-y-1 pt-1">
+              {[
+                { v: "48 hrs", l: "entrega más rápida" },
+                { v: "$3,900 MXN", l: "desde" },
+                { v: "Sin amarre", l: "cancelas cuando quieras" },
+              ].map(({ v, l }) => (
+                <span key={v} className="text-xs text-ink-400">
+                  <span className="font-semibold text-ink-800">{v}</span>
+                  {" "}{l}
+                </span>
+              ))}
+            </div>
           </>
         }
-        metric={{
-          value: "$11,600",
-          label:
-            "MXN de ahorro hasta el primer año contra agencias tradicionales mexicanas comparables.",
-        }}
       />
 
       {/* Diferenciadores */}

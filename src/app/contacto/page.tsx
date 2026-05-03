@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Calendar, Instagram } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ContactForm } from "@/components/ContactForm";
@@ -111,36 +111,6 @@ export default function ContactoPage() {
                   </a>
                 </li>
 
-                <li className="flex items-start gap-3 opacity-60">
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-bone-100 text-ink-300">
-                    <Calendar size={18} />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-ink-800">
-                      Agenda una llamada
-                    </p>
-                    <p className="mt-0.5 text-xs text-ink-400">
-                      {/* TODO: conectar Calendly real cuando esté listo */}
-                      Calendly: próximamente. Por ahora agendamos por WhatsApp.
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start gap-3 opacity-60">
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-bone-100 text-ink-300">
-                    <Instagram size={18} />
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-ink-800">
-                      Redes sociales
-                    </p>
-                    <p className="mt-0.5 text-xs text-ink-400">
-                      {/* TODO: agregar handles reales cuando se publiquen */}
-                      Instagram y TikTok aún por crearse. Por ahora estamos solo
-                      en WhatsApp.
-                    </p>
-                  </div>
-                </li>
               </ul>
             </div>
           </aside>

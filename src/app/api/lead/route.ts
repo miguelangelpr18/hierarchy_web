@@ -39,24 +39,32 @@ export async function POST(request: Request) {
   `;
 
   const apiKey = process.env.RESEND_API_KEY;
-  if (apiKey) {
-    try {
-      const resend = new Resend(apiKey);
-      await resend.emails.send({
-        from: "Hierarchy <onboarding@resend.dev>",
-        to: TO,
-        replyTo: body.email,
-        subject: `Auditoría: ${body.businessType} — ${body.email}`,
-        html,
-      });
-    } catch (err) {
-      console.error("[lead] Resend error:", err);
-    }
-  } else {
-    console.log("[lead] RESEND_API_KEY no configurado. Payload:", {
+  if (!apiKey) {
+    console.error("[lead] RESEND_API_KEY no configurada. Lead recibido:", {
       receivedAt: new Date().toISOString(),
       ...body,
     });
+    return NextResponse.json(
+      { ok: false, error: "email_not_configured" },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: "Hierarchy <onboarding@resend.dev>",
+      to: TO,
+      replyTo: body.email,
+      subject: `Auditoría: ${body.businessType} — ${body.email}`,
+      html,
+    });
+  } catch (err) {
+    console.error("[lead] Resend error:", err);
+    return NextResponse.json(
+      { ok: false, error: "send_failed" },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ ok: true });

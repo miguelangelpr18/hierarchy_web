@@ -46,25 +46,33 @@ export async function POST(request: Request) {
   `;
 
   const apiKey = process.env.RESEND_API_KEY;
-  if (apiKey) {
-    try {
-      const resend = new Resend(apiKey);
-      await resend.emails.send({
-        from: "Hierarchy <onboarding@resend.dev>",
-        to: TO,
-        replyTo: body.email,
-        subject: `Nuevo contacto: ${body.name} — ${body.business}`,
-        html,
-      });
-    } catch (err) {
-      console.error("[contact] Resend error:", err);
-      // Responde 200 igualmente para no mostrar error al usuario
-    }
-  } else {
-    console.log("[contact] RESEND_API_KEY no configurado. Payload:", {
+  if (!apiKey) {
+    // Sin clave configurada: loguea el lead para que no se pierda y avisa al frontend
+    console.error("[contact] RESEND_API_KEY no configurada. Lead recibido:", {
       receivedAt: new Date().toISOString(),
       ...body,
     });
+    return NextResponse.json(
+      { ok: false, error: "email_not_configured" },
+      { status: 503 },
+    );
+  }
+
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: "Hierarchy <onboarding@resend.dev>",
+      to: TO,
+      replyTo: body.email,
+      subject: `Nuevo contacto: ${body.name} — ${body.business}`,
+      html,
+    });
+  } catch (err) {
+    console.error("[contact] Resend error:", err);
+    return NextResponse.json(
+      { ok: false, error: "send_failed" },
+      { status: 500 },
+    );
   }
 
   return NextResponse.json({ ok: true });

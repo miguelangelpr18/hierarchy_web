@@ -7,11 +7,9 @@ type Status = "idle" | "loading" | "ok" | "error";
 
 export function AuditForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setError(null);
     setStatus("loading");
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form));
@@ -25,9 +23,8 @@ export function AuditForm() {
       if (!res.ok) throw new Error("Error en el servidor");
       setStatus("ok");
       form.reset();
-    } catch (err) {
+    } catch {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Error desconocido");
     }
   }
 
@@ -90,10 +87,19 @@ export function AuditForm() {
         {status === "loading" ? "Enviando…" : "Quiero mi auditoría gratis"}
         <ArrowRight size={16} />
       </button>
-      {error && (
-        <p className="text-sm text-red-700">
-          No pudimos enviar tu solicitud: {error}. Mejor escríbenos directo por WhatsApp.
-        </p>
+      {status === "error" && (
+        <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+          No pudimos enviar tu solicitud por aquí.{" "}
+          <a
+            href="https://wa.me/528127179766?text=Hola%2C%20quiero%20la%20auditor%C3%ADa%20gratis%20de%20mi%20sitio."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold underline"
+          >
+            Escríbenos por WhatsApp
+          </a>{" "}
+          y te la mandamos igual.
+        </div>
       )}
       <p className="text-xs text-ink-300">
         Sin spam. Usamos tus datos solo para responderte.
