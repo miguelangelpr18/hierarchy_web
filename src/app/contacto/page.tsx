@@ -1,7 +1,6 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ContactForm } from "@/components/ContactForm";
 import { FAQ, type FAQItem } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata } from "@/lib/seo";
@@ -9,16 +8,16 @@ import { site } from "@/lib/site";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export const metadata = pageMetadata({
-  title: "Contacto · Arrancar conversación",
+  title: "Contacto · Hablemos",
   description:
-    "Cuéntanos del proyecto y te respondemos en menos de una hora hábil. WhatsApp directo, email, formulario o videollamada.",
+    "Escríbenos por WhatsApp o email. Te respondemos el mismo día hábil.",
   path: "/contacto",
 });
 
 const contactFaq: FAQItem[] = [
   {
-    q: "¿Cuánto tardan en responder un mensaje nuevo?",
-    a: "Menos de una hora en horario hábil (9 a 19, lunes a viernes, hora CDMX). Fuera de horario, primera respuesta al día siguiente antes de las 11 de la mañana.",
+    q: "¿Cuánto tardan en responder?",
+    a: "El mismo día hábil. En horario de 9 a 19 (hora CDMX) normalmente en menos de una hora.",
   },
   {
     q: "¿Trabajan con clientes fuera de México?",
@@ -26,7 +25,7 @@ const contactFaq: FAQItem[] = [
   },
   {
     q: "¿Necesito tener todo el contenido listo antes de contactarlos?",
-    a: "No. Puedes llegar con cero. Si no tienes copy, te ayudamos a escribirlo. Si no tienes fotos, usamos placeholders profesionales mientras consigues las tuyas. La idea es bajar tu fricción para arrancar.",
+    a: "No. Puedes llegar con cero. Si no tienes copy, te ayudamos a escribirlo. Si no tienes fotos, usamos placeholders profesionales mientras consigues las tuyas.",
   },
   {
     q: "¿Hacen contratos formales o trabajan con la palabra?",
@@ -55,74 +54,56 @@ export default function ContactoPage() {
       <Breadcrumbs items={[{ label: "Contacto", href: "/contacto" }]} />
       <Hero
         eyebrow="El siguiente paso"
-        headline="Cuéntanos del proyecto. Tomamos 30 minutos esta semana para entender."
-        sub="No hay junta de descubrimiento de dos horas, ni cuestionario de 40 preguntas. Una conversación corta basta para saber si encajamos."
+        headline="Escríbenos. Una conversación corta basta para arrancar."
+        sub="Sin formularios, sin filas de soporte. Hablas directo con la persona que va a construir tu sitio."
       />
 
-      <section className="container-x py-12 md:py-16">
-        <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-7">
-            <ContactForm />
+      <section className="container-x py-12 md:py-20">
+        <div className="mx-auto max-w-lg">
+          <div className="grid gap-4">
+            <a
+              href={whatsappLink("contacto")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-2xl border border-ink-800/10 bg-bone-50 p-6 transition-all hover:-translate-y-0.5 hover:border-ink-800/30 hover:shadow-sm"
+            >
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-lime-500/15 text-lime-700 transition-colors group-hover:bg-lime-500 group-hover:text-ink-800">
+                <MessageCircle size={22} />
+              </span>
+              <div>
+                <p className="font-semibold text-ink-800">WhatsApp directo</p>
+                <p className="mt-0.5 text-sm text-ink-400">
+                  +{site.whatsapp} · Respuesta el mismo día hábil
+                </p>
+              </div>
+            </a>
+
+            <a
+              href={`mailto:${site.email}`}
+              className="group flex items-center gap-5 rounded-2xl border border-ink-800/10 bg-bone-50 p-6 transition-all hover:-translate-y-0.5 hover:border-ink-800/30 hover:shadow-sm"
+            >
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-lime-500/15 text-lime-700 transition-colors group-hover:bg-lime-500 group-hover:text-ink-800">
+                <Mail size={22} />
+              </span>
+              <div>
+                <p className="font-semibold text-ink-800">Email</p>
+                <p className="mt-0.5 text-sm text-ink-400">{site.email}</p>
+              </div>
+            </a>
           </div>
 
-          <aside className="md:col-span-5">
-            <div className="rounded-2xl border border-ink-800/10 bg-bone-50 p-6 md:p-7">
-              <h2 className="text-lg font-semibold tracking-tightest text-ink-800">
-                Métodos alternativos
-              </h2>
-              <p className="mt-2 text-sm text-ink-400">
-                Lo que sea más cómodo para ti.
-              </p>
-
-              <ul className="mt-5 space-y-4">
-                <li>
-                  <a
-                    href={whatsappLink("contacto")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-start gap-3"
-                  >
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-lime-500/15 text-lime-700 group-hover:bg-lime-500 group-hover:text-ink-800">
-                      <MessageCircle size={18} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink-800">
-                        WhatsApp directo
-                      </p>
-                      <p className="mt-0.5 text-xs text-ink-400">
-                        Respuesta en menos de 1 hora hábil. Tel +{site.whatsapp}.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href={`mailto:${site.email}`}
-                    className="group flex items-start gap-3"
-                  >
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-lime-500/15 text-lime-700 group-hover:bg-lime-500 group-hover:text-ink-800">
-                      <Mail size={18} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-ink-800">Email</p>
-                      <p className="mt-0.5 text-xs text-ink-400">{site.email}</p>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </aside>
+          <p className="mt-8 text-center text-sm text-ink-300">
+            Preferimos WhatsApp — es más rápido para los dos.
+          </p>
         </div>
       </section>
 
       <section className="container-x py-16 md:py-24" id="faq">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-4">
-            <span className="eyebrow">Antes de mandar el formulario</span>
+            <span className="eyebrow">Preguntas frecuentes</span>
             <h2 className="h-display mt-4 text-3xl md:text-4xl">
-              Las preguntas que casi nadie hace pero todos quieren saber.
+              Lo que nos preguntan antes de escribir.
             </h2>
           </div>
           <div className="md:col-span-8">

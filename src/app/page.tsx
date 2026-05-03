@@ -104,7 +104,7 @@ export default function HomePage() {
             <div className="flex w-full flex-wrap items-center gap-x-6 gap-y-1 pt-1">
               {[
                 { v: "48 hrs", l: "entrega más rápida" },
-                { v: "$3,900 MXN", l: "desde" },
+                { v: "Desde:", l: "$3,900 MXN" },
                 { v: "Sin amarre", l: "cancelas cuando quieras" },
               ].map(({ v, l }) => (
                 <span key={v} className="text-xs text-ink-400">
