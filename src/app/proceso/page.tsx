@@ -1,7 +1,7 @@
 import {
-  CheckCircle2,
-  ShieldCheck,
-  GitBranch,
+  Zap,
+  Package,
+  DoorOpen,
   MessageCircle,
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Cómo trabajamos · Proceso de entrega",
   description:
-    "El paso a paso para llevar tu sitio del brief al deploy: descubrimiento, brief, producción, revisión y go-live. Garantías técnicas y stack que usamos.",
+    "El paso a paso para llevar tu sitio del primer mensaje al lanzamiento: descubrimiento, propuesta, producción, revisión y publicación. Garantías claras, sin letra chiquita.",
   path: "/proceso",
 });
 
@@ -22,24 +22,24 @@ const steps = [
     t: "Descubrimiento",
     when: "Día 0 — 30 minutos",
     text:
-      "Una llamada por WhatsApp o videollamada. Te preguntamos qué hace tu negocio, qué problema resuelve la página, y qué métrica mediríamos para saber que funcionó. No es venta, es triaje.",
+      "Una llamada por WhatsApp o videollamada. Te preguntamos qué hace tu negocio, qué problema resuelve la página y qué quieres lograr con ella. No es venta, es entender.",
     out: "Diagnóstico inicial y plan recomendado.",
   },
   {
     n: "02",
-    t: "Brief y propuesta",
+    t: "Propuesta",
     when: "Día 1 a 2",
     text:
       "Te mandamos una propuesta de una página con el alcance cerrado, la fecha de entrega y el precio fijo. Si firmas y va el 50% de anticipo, agendamos arranque inmediato.",
-    out: "Documento de alcance + cronograma + invoice.",
+    out: "Documento de alcance, cronograma y factura.",
   },
   {
     n: "03",
     t: "Producción",
     when: "Día 2 al 5 (Pro Plan)",
     text:
-      "Diseño y código corren en paralelo. Generamos los wireframes con asistencia de AI para que tú revises rápido, y escribimos el código en TypeScript con Next.js. Recibes un primer borrador navegable en 48 horas.",
-    out: "Borrador en URL privada de staging.",
+      "Diseño y desarrollo corren en paralelo. Aceleramos lo repetitivo con asistencia de AI para que tú revises rápido. Recibes un primer borrador navegable en 48 horas.",
+    out: "Borrador en URL privada para que lo veas en tu celular.",
   },
   {
     n: "04",
@@ -51,77 +51,38 @@ const steps = [
   },
   {
     n: "05",
-    t: "Deploy",
+    t: "Publicación",
     when: "Día 7",
     text:
-      "Conectamos el dominio, corremos el check final de Lighthouse (no entregamos por debajo de 90 en mobile), te invitamos como owner del repositorio en GitHub, te damos 30 minutos de capacitación y arrancamos el mantenimiento.",
-    out: "Sitio en producción + repo + capacitación.",
+      "Conectamos tu dominio, dejamos tu sitio en línea y te damos 30 minutos de capacitación para que sepas cómo funciona. A partir de aquí arranca tu plan de mantenimiento.",
+    out: "Sitio publicado y capacitación entregada.",
   },
 ];
 
 const guarantees = [
   {
-    icon: ShieldCheck,
-    title: "Lighthouse > 90 antes de entregar",
+    icon: Zap,
+    title: "Construido con performance",
     text:
-      "Si tu sitio no saca al menos 90 en Performance en mobile en el Lighthouse de Chrome, no lo deployamos. Es la línea que no cruzamos.",
+      "Tu sitio carga rápido en cualquier celular, hasta con internet lento.",
   },
   {
-    icon: GitBranch,
-    title: "Tu código vive en tu GitHub",
+    icon: Package,
+    title: "Tu código, en tu poder",
     text:
-      "Te invitamos como owner del repositorio el día del deploy. Si decides irte, ya tienes todo. Sin pedirlo, sin pagarlo extra, sin trámite.",
+      "Al entregar tu sitio te mandamos un ZIP con todo el código. Para que sea 100% tuyo.",
   },
   {
-    icon: CheckCircle2,
+    icon: DoorOpen,
     title: "Política de salida abierta",
     text:
-      "Cancelas el mantenimiento cuando quieras. Te ayudamos a configurar tu propio Vercel y bajamos el sitio del nuestro siete días después. Una hora gratis de soporte para la migración.",
+      "Cancelas el mantenimiento cuando quieras. Tu sitio sigue activo hasta el fin del mes pagado.",
   },
   {
     icon: MessageCircle,
-    title: "Soporte por WhatsApp directo",
+    title: "Soporte directo, sin tickets",
     text:
-      "No usamos sistema de tickets. Hablas con el mismo equipo que construyó tu sitio. Tiempo de respuesta promedio: menos de una hora hábil.",
-  },
-];
-
-const stack = [
-  {
-    name: "Next.js 15",
-    role: "Framework",
-    why:
-      "Server-side rendering por default. Tu página llega a Google y al usuario ya armada, no se construye en cada visita con megabytes de JavaScript.",
-  },
-  {
-    name: "Vercel",
-    role: "Hosting",
-    why:
-      "Edge network global con 99.99% uptime, CDN incluida, certificado SSL automático y deploys atómicos. Lo mismo que usan Notion y Airbnb.",
-  },
-  {
-    name: "Tailwind CSS",
-    role: "Estilos",
-    why:
-      "Estilos compilados al milímetro de lo que la página necesita. Resultado: bundles 5 a 10 veces más livianos que sitios con WordPress o Bootstrap.",
-  },
-  {
-    name: "TypeScript",
-    role: "Lenguaje",
-    why:
-      "Catch de errores en tiempo de compilación, antes de llegar a producción. Menos bugs en el sitio del cliente, menos visitas de soporte que pagar.",
-  },
-  {
-    name: "shadcn/ui + Radix",
-    role: "Componentes",
-    why:
-      "Componentes accesibles de origen (lectores de pantalla, navegación con teclado). El sitio funciona para todos, incluyendo usuarios con discapacidades.",
-  },
-  {
-    name: "Plausible",
-    role: "Analytics",
-    why:
-      "Sin cookies, sin banner de consentimiento. Cumple con LFPDPPP y GDPR sin trámite, y respeta a tus usuarios.",
+      "Hablas por WhatsApp con la misma persona que construyó tu sitio. Tiempo de respuesta promedio: el mismo día hábil.",
   },
 ];
 
@@ -131,8 +92,8 @@ export default function ProcesoPage() {
       <Breadcrumbs items={[{ label: "Proceso", href: "/proceso" }]} />
       <Hero
         eyebrow="Metodología"
-        headline="Del brief al sitio en producción, sin junta semanal eterna."
-        sub="Trabajamos en cinco pasos rastreables. Cada paso tiene fecha, entregable y forma de medirse. Si nos atrasamos, te lo decimos antes de que tú nos preguntes."
+        headline="Del primer mensaje a tu sitio publicado, sin juntas eternas."
+        sub="Trabajamos en cinco pasos rastreables. Cada paso tiene fecha y entregable. Si nos atrasamos, te lo decimos antes de que tú nos preguntes."
       />
 
       {/* Timeline */}
@@ -181,11 +142,10 @@ export default function ProcesoPage() {
           <div className="max-w-2xl">
             <span className="eyebrow">Garantías</span>
             <h2 className="h-display mt-4 text-3xl md:text-4xl">
-              Lo que firmamos y lo que verificamos antes de entregar.
+              Lo que firmamos contigo.
             </h2>
             <p className="mt-4 text-base text-ink-400">
-              Cada garantía es falsificable: si no la cumplimos, lo demostramos
-              y lo arreglamos sin costo extra.
+              Compromisos claros, sin letra chiquita.
             </p>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
@@ -207,40 +167,8 @@ export default function ProcesoPage() {
         </div>
       </section>
 
-      {/* Stack */}
-      <section className="container-x py-16 md:py-24">
-        <div className="max-w-2xl">
-          <span className="eyebrow">Stack que usamos</span>
-          <h2 className="h-display mt-4 text-3xl md:text-4xl">
-            Mismo stack de Notion y Airbnb. Aplicado a tu negocio local.
-          </h2>
-          <p className="mt-4 text-base text-ink-400">
-            Cada herramienta cumple un rol específico y todas son industria
-            estándar. Nada propietario, nada que te amarre.
-          </p>
-        </div>
-        <ul className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {stack.map((s) => (
-            <li
-              key={s.name}
-              className="rounded-2xl border border-ink-800/10 bg-bone-50 p-5"
-            >
-              <div className="flex items-baseline justify-between gap-3">
-                <span className="font-mono text-sm font-semibold text-ink-800">
-                  {s.name}
-                </span>
-                <span className="text-xs uppercase tracking-wider text-ink-300">
-                  {s.role}
-                </span>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-ink-500">{s.why}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <CTASection
-        title="¿Quieres que aplique este proceso a tu negocio?"
+        title="¿Quieres que apliquemos este proceso a tu negocio?"
         sub="Cuéntanos qué haces y te decimos cuál de los planes encaja, cuánto tarda y cuándo arrancaríamos."
         context="proceso"
       />

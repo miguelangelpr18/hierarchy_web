@@ -148,9 +148,9 @@ export default function RootLayout({
               Hierarchy Web Agency
             </h1>
             <p className="mt-3 max-w-prose text-base text-ink-500">
-              Construimos páginas web premium para negocios mexicanos con stack moderno
-              (Next.js + Vercel) y precios accesibles. Entregamos en 48-72 horas el plan
-              de entrada. Contáctanos por WhatsApp al{" "}
+              Construimos páginas web profesionales para negocios mexicanos a precio
+              justo. Entregamos en 48 a 72 horas el plan de entrada. Contáctanos por
+              WhatsApp al{" "}
               <a className="underline" href={`https://wa.me/${site.whatsapp}`}>
                 +{site.whatsapp}
               </a>{" "}

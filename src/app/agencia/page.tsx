@@ -1,8 +1,8 @@
 import {
-  Code2,
   Cpu,
   Globe,
   KeySquare,
+  DoorOpen,
 } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -10,9 +10,9 @@ import { CTASection } from "@/components/CTASection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "La agencia · Filosofía y stack",
+  title: "La agencia · Filosofía y forma de trabajar",
   description:
-    "Hierarchy combina ingeniería de software moderna con automatización de IA para entregar sitios premium al precio justo. Construidos desde México para negocios mexicanos.",
+    "Combinamos ingeniería moderna con automatización de IA para entregar sitios profesionales al precio justo. Construidos desde México, para negocios mexicanos.",
   path: "/agencia",
 });
 
@@ -20,7 +20,7 @@ const principles = [
   {
     title: "El sitio es del cliente, no de la agencia.",
     text:
-      "Te invitamos como owner del repositorio el día uno. Si decides irte, ya tienes todo. Esto baja la fricción de cierre y nos obliga a mantener la calidad por mérito, no por candado.",
+      "Al entregar tu sitio te mandamos un ZIP con todo el código. Si decides irte, ya tienes todo. Esto baja la fricción de cierre y nos obliga a mantener la calidad por mérito, no por candado.",
   },
   {
     title: "Precio público, alcance cerrado.",
@@ -28,41 +28,41 @@ const principles = [
       "Cobramos lo que decimos que cobramos. Si el alcance crece, te enseñamos el delta antes de tocar una línea. No hay sorpresa al cierre, no hay reclamo después.",
   },
   {
-    title: "La velocidad técnica no es opcional.",
+    title: "La velocidad no es opcional.",
     text:
-      "Una página que tarda 4 segundos en cargar pierde dinero antes de existir. Por eso mediremos Lighthouse en mobile antes de cada deploy. Si no llega a 90, no entregamos.",
+      "Una página que tarda 4 segundos en cargar pierde clientes antes de existir. Por eso construimos cada sitio para que cargue rápido en celular, hasta con internet lento.",
   },
   {
     title: "AI para acelerar, humanos para decidir.",
     text:
-      "Usamos modelos de AI para wireframes, copy base, optimización de imágenes y deploy. Pero diseño, estrategia y código final pasan por mano humana. La AI es un asistente, no el reemplazo.",
+      "Usamos modelos de AI para wireframes, copy base, optimización de imágenes y publicación. Pero diseño, estrategia y revisión final pasan por mano humana. La AI es un asistente, no el reemplazo.",
   },
 ];
 
 const distinctions = [
   {
     icon: Cpu,
-    h: "Stack moderno, no constructor maquillado",
+    h: "Construido a mano, no exportado de un constructor",
     t:
-      "Escribimos Next.js y TypeScript a mano. Nada de exportar de un constructor visual y vender el resultado. Tu sitio queda en código abierto que cualquier desarrollador puede mantener.",
+      "Escribimos cada sitio a la medida del negocio. Nada de plantillas recicladas ni exportar de un constructor visual y venderlo como propio.",
   },
   {
     icon: KeySquare,
-    h: "Tu dominio, tu hosting, tu cuenta",
+    h: "Tu dominio, a tu nombre",
     t:
-      "El dominio se registra a tu nombre. El hosting en Vercel queda en tu cuenta o en la nuestra (tú eliges). Las credenciales son tuyas. Nosotros somos colaboradores, no propietarios.",
+      "El dominio se registra a tu nombre desde el día uno. Las credenciales son tuyas. Nosotros operamos el sitio, tú eres el dueño.",
   },
   {
-    icon: Code2,
+    icon: DoorOpen,
     h: "Cero contrato de permanencia",
     t:
-      "El plan recurrente se cancela cuando tú quieras, sin penalización. Te ayudamos con la migración y la salida es parte del servicio, no un castigo.",
+      "El plan recurrente se cancela cuando tú quieras, sin penalización. Te mandamos un ZIP con tu sitio y la salida es parte del servicio, no un castigo.",
   },
   {
     icon: Globe,
     h: "Velocidad real, hecha en México",
     t:
-      "El 80% de tus clientes navega desde un celular en 4G mexicano. Optimizamos para esa realidad: mobile-first, imágenes en AVIF, JavaScript justo y necesario.",
+      "El 80% de tus clientes navega desde un celular con internet móvil. Optimizamos para esa realidad: primero el celular, imágenes ligeras, sin saturar el sitio con scripts.",
   },
 ];
 

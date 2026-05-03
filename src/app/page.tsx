@@ -17,37 +17,37 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Hierarchy Web Agency — El stack premium al precio justo",
+  title: "Hierarchy Web Agency — Páginas web profesionales en una semana",
   description:
-    "Construimos páginas web premium con Next.js + Vercel para negocios mexicanos. Entrega desde 48 horas, SEO local nativo, sin amarres. Ahorra 43% el primer año vs agencias tradicionales.",
+    "Construimos páginas web profesionales para negocios mexicanos. Entrega desde 48 horas, atención por WhatsApp, sin amarres. Hasta $11,600 MXN de ahorro el primer año vs agencias tradicionales.",
   path: "/",
 });
 
 const differentiators = [
   {
     icon: Gauge,
-    title: "Velocidad técnica medible",
+    title: "Velocidad real",
     text:
-      "Renderizamos en el servidor con Next.js. Tu página llega lista al navegador, no se arma con 2 MB de JavaScript en cada visita.",
-    metric: "Lighthouse > 90 garantizado",
+      "Tu sitio carga rápido en cualquier celular, hasta con internet lento. Construimos para la realidad mexicana, no para presumir en una conferencia.",
+    metric: "Optimizado para 4G",
   },
   {
     icon: Search,
-    title: "SEO local desde el primer commit",
+    title: "Pensado para Google",
     text:
-      "Schema.org LocalBusiness, sitemap, Open Graph y metadata por página configurados antes del deploy. Sin plugins, sin parches.",
-    metric: "100% indexable en HTML",
+      "Tu negocio aparece en búsquedas locales desde el primer día. Configuramos todo lo que Google necesita para encontrarte: dirección, horarios, servicios y reseñas.",
+    metric: "Visible en mapas",
   },
   {
     icon: ScrollText,
-    title: "Transparencia contractual",
+    title: "Sin letra chiquita",
     text:
-      "Sin contratos de permanencia. Si decides irte, te transferimos el repo en GitHub y te ayudamos a migrar el dominio a tu propio Vercel.",
-    metric: "Cero amarres legales",
+      "Precio cerrado antes de empezar. Sin contratos de permanencia. Si decides irte, te mandamos un ZIP con tu sitio para que sea 100% tuyo.",
+    metric: "Cero amarres",
   },
   {
     icon: Timer,
-    title: "Tiempos de entrega reales",
+    title: "Tiempos que sí cumplimos",
     text:
       "Una landing en 48 a 72 horas. Un sitio multi-página en 5 a 7 días. Las fechas que damos son las fechas que cumplimos, no aspiraciones.",
     metric: "Desde 48 horas",
@@ -57,11 +57,11 @@ const differentiators = [
 const homeFaq = [
   {
     q: "¿Por qué cuesta menos que una agencia tradicional?",
-    a: "Porque automatizamos lo repetitivo (wireframes, copy base, optimización de imágenes, deploy) con herramientas modernas. Cobramos el trabajo humano que sí mueve la aguja: estrategia, diseño y código limpio. Resultado: precio justo sin recortar calidad técnica.",
+    a: "Porque automatizamos lo repetitivo con herramientas modernas y trabajamos en equipo pequeño. Cobramos el trabajo humano que sí mueve la aguja: estrategia, diseño y atención cercana. Resultado: precio justo sin recortar calidad.",
   },
   {
     q: "¿Qué pasa con mi sitio si dejo de pagar el mantenimiento?",
-    a: "Te entregamos el repositorio en GitHub y te ayudamos a configurar tu propio Vercel. Tu sitio sigue vivo en tu cuenta, tu dominio sigue siendo tuyo. La salida está pensada para ser limpia, no punitiva.",
+    a: "Te mandamos un ZIP con todo el código de tu sitio para que lo tengas en tu poder. Tu sitio sigue activo hasta el fin del mes en curso pagado. Sin penalización, sin pelea.",
   },
   {
     q: "¿Y si necesito cambios después del lanzamiento?",
@@ -74,14 +74,15 @@ export default function HomePage() {
     <>
       <Hero
         variant="home"
-        eyebrow="Agencia mexicana · Stack 2026"
+        eyebrow="Agencia web · MTY, México"
         headline={
           <>
-            El stack que las agencias premium usan,{" "}
-            <span className="text-ink-300">al precio de las locales.</span>
+            <span className="block">Tu negocio en Google.</span>
+            <span className="block">Tu sitio listo en una semana.</span>
+            <span className="block text-ink-300">Más clientes.</span>
           </>
         }
-        sub="Sitios construidos con Next.js y Vercel para negocios mexicanos. Entregados en 48 horas, optimizados para Google desde el primer commit, y con tu código en tu GitHub desde el día uno."
+        sub="Páginas web profesionales. Diseño preciso completamente personalizado a la marca, velocidad en la página, y atención por WhatsApp con la persona que construyó tu sitio."
         actions={
           <>
             <a
@@ -99,9 +100,9 @@ export default function HomePage() {
           </>
         }
         metric={{
-          value: "-43%",
+          value: "$11,600",
           label:
-            "ahorro promedio en el año 1 contra agencias tradicionales mexicanas comparables.",
+            "MXN de ahorro hasta el primer año contra agencias tradicionales mexicanas comparables.",
         }}
       />
 
@@ -140,7 +141,7 @@ export default function HomePage() {
             <div className="max-w-xl">
               <span className="eyebrow">Cómo trabajamos</span>
               <h2 className="h-display mt-4 text-3xl md:text-4xl">
-                Cuatro pasos. Sin junta semanal eterna.
+                Cuatro pasos. Sin juntas eternas.
               </h2>
             </div>
             <Link
@@ -155,23 +156,23 @@ export default function HomePage() {
             {[
               {
                 n: "01",
-                t: "Descubrimiento",
-                d: "30 minutos por WhatsApp o videollamada para entender tu negocio y objetivos reales.",
+                t: "Platicamos",
+                d: "Nos platicas de tu negocio, tus ideas, tus metas por WhatsApp.",
               },
               {
                 n: "02",
-                t: "Brief y propuesta",
-                d: "Te mandamos alcance cerrado con precio fijo. Si firmas y va el 50%, arrancamos.",
+                t: "Arrancamos",
+                d: "Confirmas, pagas el anticipo y empezamos a producir el mismo día.",
               },
               {
                 n: "03",
-                t: "Producción",
-                d: "Diseño y código en paralelo. Recibes el primer borrador navegable en 48 horas.",
+                t: "Te mostramos",
+                d: "En 2 a 7 días te mandamos el sitio navegable. Pides los cambios que necesites.",
               },
               {
                 n: "04",
-                t: "Deploy y entrega",
-                d: "Lighthouse > 90, dominio conectado, código en tu GitHub. Capacitación de 30 minutos.",
+                t: "Publicamos",
+                d: "Tu sitio en línea con tu dominio.",
               },
             ].map((step) => (
               <li
@@ -227,9 +228,9 @@ export default function HomePage() {
             </h2>
             <ul className="mt-6 space-y-3 text-sm text-ink-500">
               {[
-                "Lighthouse score real de tu sitio en mobile",
-                "Lo que Google sí está leyendo (y lo que no)",
-                "3 fixes de mayor impacto, priorizados",
+                "Qué tan rápido carga tu sitio en celular",
+                "Qué está viendo Google de tu negocio (y qué no)",
+                "3 mejoras de mayor impacto, priorizadas",
                 "Te lo enviamos por WhatsApp en menos de 24 horas hábiles",
               ].map((b) => (
                 <li key={b} className="flex items-start gap-2">

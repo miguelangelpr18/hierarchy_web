@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Planes y precios públicos",
   description:
-    "Tres planes para negocios mexicanos: Enter ($3,900 + $550/mes), Pro ($7,500 + $650/mes) y Platinum ($16,900 + $850/mes). Comparativa real contra Wix, WordPress y constructores AI.",
+    "Tres planes para negocios mexicanos: Enter ($3,900 + $550/mes), Pro ($7,500 + $650/mes) y Platinum ($16,900 + $850/mes). Precios públicos, sin letra chiquita.",
   path: "/planes",
 });
 
@@ -22,7 +22,7 @@ const pricingFaq: FAQItem[] = [
   },
   {
     q: "¿Y si en seis meses quiero cancelar el mantenimiento?",
-    a: "Sin problema y sin penalización. Te invitamos como owner del repositorio en GitHub, te ayudamos a configurar tu propio Vercel y bajamos el sitio del nuestro siete días después. Te damos una hora gratis de soporte para la migración.",
+    a: "Sin problema y sin penalización. Te mandamos un ZIP con todo el código de tu sitio para que lo tengas en tu poder. Tu sitio sigue activo hasta el fin del mes en curso pagado, después se baja del nuestro. Si después quieres que te ayudemos a montarlo en otro lado, lo cotizamos como servicio aparte.",
   },
   {
     q: "¿Puedo cambiar de plan después de arrancar?",
@@ -73,9 +73,9 @@ const competitorsCompare = [
     h: "Hierarchy Pro",
     initial: "$7,500",
     monthly: "$650",
-    speed: "Lighthouse > 90",
-    seo: "Schema local nativo",
-    code: "Tuyo en GitHub",
+    speed: "Carga rápida en celular",
+    seo: "Listo para Google desde día 1",
+    code: "Tuyo en ZIP al entregar",
     delivery: "5-7 días",
     highlight: true,
   },
@@ -83,8 +83,8 @@ const competitorsCompare = [
     h: "Wix / Squarespace",
     initial: "Hazlo tú o paga $3,000-$8,000 a un freelancer",
     monthly: "$320-$700 USD/año",
-    speed: "Lighthouse 30-60 móvil típico",
-    seo: "Sin schema avanzado",
+    speed: "Carga lenta típica en móvil",
+    seo: "Configuración limitada",
     code: "No exportable",
     delivery: "Tú lo armas",
   },
@@ -92,17 +92,17 @@ const competitorsCompare = [
     h: "WordPress (agencia local)",
     initial: "$8,000-$25,000",
     monthly: "$550-$1,550",
-    speed: "Plugins ralentizan, Lighthouse 40-70",
-    seo: "Yoast / Rank Math con plugins",
-    code: "Tuyo pero acoplado a hosting",
+    speed: "Plugins ralentizan el sitio",
+    seo: "Configurable con plugins",
+    code: "Tuyo pero atado al hosting",
     delivery: "10-20 días",
   },
   {
     h: "Constructores AI (Lovable, etc)",
     initial: "$4,900-$19,900",
     monthly: "$650-$2,300",
-    speed: "SPA pesado, HTML vacío para crawlers",
-    seo: "Sin SSR, dependiente del render JS",
+    speed: "Sitios pesados que cargan lento",
+    seo: "Limitado por la plataforma",
     code: "Atado al constructor",
     delivery: "2-14 días",
   },
@@ -112,7 +112,7 @@ const maintenanceCompare = [
   { name: "Hierarchy Enter", price: "$550/mes", note: "Hosting + 2 cambios/mes + soporte WhatsApp" },
   { name: "Hierarchy Pro", price: "$650/mes", note: "Reporte SEO + 4 cambios/mes" },
   { name: "Hierarchy Platinum", price: "$850/mes", note: "E-commerce, reporte semanal, 8 cambios/mes" },
-  { name: "Constructores AI (rango público)", price: "$650-$2,300/mes", note: "Mensualidad obligatoria, sin código en tu GitHub" },
+  { name: "Constructores AI (rango público)", price: "$650-$2,300/mes", note: "Mensualidad obligatoria, código atado al constructor" },
   { name: "Agencia WordPress local", price: "$550-$1,550/mes", note: "Hosting compartido, soporte por ticket" },
   { name: "Wix / Squarespace anualizado", price: "$320-$700 MXN/mes", note: "Plataforma cerrada, no exportable" },
 ];

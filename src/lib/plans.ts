@@ -38,8 +38,8 @@ export const plans: Plan[] = [
       "Botón flotante de WhatsApp",
       "Integración con Google Maps",
       "Formulario que envía a WhatsApp o email",
-      "SEO local con schema.org LocalBusiness",
-      "Hosting en Vercel + dominio .com (1 año)",
+      "Listo para Google con SEO local de tu negocio",
+      "Hosting profesional + dominio .com (1 año)",
       "Certificado SSL incluido",
     ],
     maintenanceIncludes: [
@@ -72,7 +72,7 @@ export const plans: Plan[] = [
       "Hasta 3 formularios distintos",
       "Galería con lightbox",
       "Animaciones suaves (Framer Motion ligero)",
-      "Plausible Analytics configurado",
+      "Analítica de visitantes sin cookies, sin banner",
       "Hasta 5 emails con dominio del cliente",
     ],
     maintenanceIncludes: [

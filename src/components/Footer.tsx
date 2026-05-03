@@ -3,19 +3,17 @@ import { Logo } from "./Logo";
 import { site, navLinks } from "@/lib/site";
 import { whatsappLink } from "@/lib/whatsapp";
 
-const stack = ["Next.js 15", "Vercel", "Tailwind CSS", "TypeScript"];
-
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-ink-800/5 bg-bone-100">
       <div className="container-x grid gap-10 py-14 md:grid-cols-12">
-        <div className="md:col-span-5">
+        <div className="md:col-span-6">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-400">
-            Construimos sitios premium con stack moderno, al precio que un negocio mexicano sí
-            puede pagar. Hosting, código y dominio siempre a tu nombre.
+            Páginas web profesionales para negocios mexicanos. Diseño, velocidad
+            y atención por WhatsApp con la persona que construyó tu sitio.
           </p>
           <a
             href={whatsappLink("general")}
@@ -40,21 +38,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-4">
+        <div className="md:col-span-3">
           <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-300">
-            Stack que entregamos
-          </h3>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {stack.map((s) => (
-              <li
-                key={s}
-                className="rounded-full border border-ink-800/10 bg-bone-50 px-3 py-1 text-xs font-medium text-ink-500"
-              >
-                {s}
-              </li>
-            ))}
-          </ul>
-          <h3 className="mt-8 text-xs font-semibold uppercase tracking-wider text-ink-300">
             Contacto
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-ink-500">
@@ -80,9 +65,8 @@ export function Footer() {
       <div className="border-t border-ink-800/5">
         <div className="container-x flex flex-col gap-2 py-6 text-xs text-ink-300 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} {site.name}. Hecho en México.</p>
-          <p>
-            Sin cookies de tracking. Analítica con{" "}
-            <span className="text-ink-500">Plausible</span>.
+          <p className="font-mono text-[11px] text-ink-300">
+            Built with Next.js &amp; Vercel
           </p>
         </div>
       </div>
