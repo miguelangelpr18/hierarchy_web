@@ -29,10 +29,6 @@ const pricingFaq: FAQItem[] = [
     a: "Sí. Si subes de plan, cobramos solo la diferencia del inicial y ajustamos la mensualidad al mes siguiente. Si bajas de plan, lo aplicamos al siguiente ciclo de facturación.",
   },
   {
-    q: "¿Por qué solo aparecen tres planes y no algo más barato?",
-    a: "Porque más barato sería un Wix con plantilla y eso ya existe. Nuestro punto de entrada es lo mínimo viable para que un negocio pequeño tenga un sitio que cargue rápido, ranquee en Google y se vea profesional.",
-  },
-  {
     q: "¿Aceptan tarjeta o solo transferencia?",
     a: "Aceptamos transferencia, tarjeta vía Stripe (con opción a meses sin intereses cuando aplica) y depósito en efectivo. Para el inicial pedimos 50% al firmar y 50% al entregar.",
   },
@@ -254,9 +250,9 @@ export default function PlanesPage() {
       </section>
 
       <CTASection
-        title="¿Listo para que un humano te recomiende qué plan te conviene?"
-        sub="Te contestamos por WhatsApp con la opción que más sentido tiene para tu negocio. Sin venta agresiva."
-        ctaLabel="Quiero recomendación"
+        title="¿No sabes cuál plan te conviene? Cuéntanos de tu negocio."
+        sub="Te respondemos por WhatsApp con la opción que más te conviene. El mismo día hábil."
+        ctaLabel="Quiero mi sitio esta semana"
       />
     </>
   );

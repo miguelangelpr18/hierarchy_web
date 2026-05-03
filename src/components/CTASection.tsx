@@ -43,7 +43,7 @@ export function CTASection({
               <ArrowRight size={16} />
             </a>
             <p className="mt-3 text-xs text-bone-50/50">
-              Te respondemos en menos de 1 hora hábil.
+              Te respondemos el mismo día hábil.
             </p>
           </div>
         </div>

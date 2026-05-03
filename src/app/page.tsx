@@ -82,7 +82,7 @@ export default function HomePage() {
               Tu sitio listo en{" "}
               <span className="bg-lime-500 px-1 text-ink-800">una semana.</span>
             </span>
-            <span className="block text-ink-300">Más clientes.</span>
+            <span className="block underline decoration-lime-500 decoration-4 underline-offset-4">Más ventas.</span>
           </>
         }
         sub="Páginas web profesionales. Diseño preciso completamente personalizado a la marca, velocidad en la página, y atención por WhatsApp con la persona que construyó tu sitio."
