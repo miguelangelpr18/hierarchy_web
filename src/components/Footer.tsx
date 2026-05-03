@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { LogoTagline } from "./Logo";
 import { site, navLinks } from "@/lib/site";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="border-t border-ink-800/5 bg-bone-100">
       <div className="container-x grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-6">
-          <Logo />
+          <LogoTagline />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-400">
             Páginas web profesionales para negocios mexicanos. Diseño, velocidad
             y atención por WhatsApp con la persona que construyó tu sitio.

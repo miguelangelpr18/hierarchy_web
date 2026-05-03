@@ -3,7 +3,7 @@ export const site = {
   shortName: "Hierarchy",
   domain: "hierarchywebagency.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://hierarchywebagency.com",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hola@hierarchywebagency.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hierarchywebagency@gmail.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "528127179766",
   plausibleDomain: process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? "hierarchywebagency.com",
   description:

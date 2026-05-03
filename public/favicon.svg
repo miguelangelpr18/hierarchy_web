@@ -1,0 +1,5 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="hierarchy">
+  <rect width="64" height="64" rx="12" fill="#FBFAF6"/>
+  <text x="11" y="48" font-family="Geist, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="50" font-weight="700" fill="#0F0F12" letter-spacing="-2">h</text>
+  <rect x="9" y="52" width="34" height="6" fill="#C4F542"/>
+</svg>

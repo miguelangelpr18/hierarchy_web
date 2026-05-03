@@ -33,6 +33,11 @@ export const metadata: Metadata = {
   publisher: site.name,
   alternates: { canonical: "/" },
   formatDetection: { email: false, telephone: false, address: false },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: site.locale,
@@ -41,14 +46,14 @@ export const metadata: Metadata = {
     title: `${site.name} — Páginas web premium para negocios mexicanos`,
     description: site.description,
     images: [
-      { url: "/og-default.svg", width: 1200, height: 630, alt: site.name },
+      { url: "/og.png", width: 1200, height: 630, alt: site.name },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
-    images: ["/og-default.svg"],
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -65,7 +70,7 @@ const organizationSchema = {
   name: site.name,
   alternateName: site.shortName,
   url: site.url,
-  logo: `${site.url}/og-default.svg`,
+  logo: `${site.url}/og.png`,
   description: site.description,
   email: site.email,
   contactPoint: [
@@ -78,6 +83,35 @@ const organizationSchema = {
     },
   ],
   sameAs: [],
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Hierarchy Web Agency",
+  url: "https://hierarchywebagency.com",
+  email: "miguelangelpenar18@gmail.com",
+  telephone: "+528127179766",
+  priceRange: "$$",
+  currenciesAccepted: "MXN",
+  paymentAccepted: "Cash, Credit Card, Bank Transfer",
+  image: "https://hierarchywebagency.com/og.png",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Monterrey",
+    addressRegion: "Nuevo León",
+    addressCountry: "MX",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 25.6866,
+    longitude: -100.3161,
+  },
+  areaServed: [
+    { "@type": "Country", name: "México" },
+    { "@type": "City", name: "Monterrey" },
+  ],
+  serviceArea: { "@type": "Country", name: "México" },
 };
 
 const websiteSchema = {
@@ -131,7 +165,7 @@ export default function RootLayout({
   return (
     <html lang={site.locale} className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <JsonLd data={[organizationSchema, websiteSchema, serviceSchema]} />
+        <JsonLd data={[organizationSchema, localBusinessSchema, websiteSchema, serviceSchema]} />
         {process.env.NODE_ENV === "production" && (
           <Script
             defer

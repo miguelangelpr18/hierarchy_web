@@ -68,14 +68,15 @@ export function AuditForm() {
           name="email"
           type="email"
           label="Email"
-          placeholder="tu@correo.com"
+          placeholder="hierarchywebagency@gmail.com"
           autoComplete="email"
           required
         />
         <Field
           name="whatsapp"
+          type="tel"
           label="WhatsApp"
-          placeholder="55 1234 5678"
+          placeholder="52 81 2717 9766"
           autoComplete="tel"
           required
         />

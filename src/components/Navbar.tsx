@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "./Logo";
+import { LogoPrimary as Logo } from "./Logo";
 import { navLinks } from "@/lib/site";
 import { whatsappLink } from "@/lib/whatsapp";
 

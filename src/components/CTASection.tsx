@@ -12,7 +12,7 @@ export function CTASection({
   title,
   sub,
   context = "general",
-  ctaLabel = "Hablemos por WhatsApp",
+  ctaLabel = "Quiero mi sitio esta semana",
 }: Props) {
   return (
     <section className="container-x py-16 md:py-24">

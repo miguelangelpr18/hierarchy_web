@@ -1,23 +1,81 @@
 import Link from "next/link";
 
-export function Logo({ className = "" }: { className?: string }) {
+// logo-primary: wordmark horizontal con subrayado lime
+export function LogoPrimary({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
       aria-label="Hierarchy Web Agency — Inicio"
-      className={`group inline-flex items-center gap-2 ${className}`}
+      className={`inline-flex items-center ${className}`}
     >
-      <span
-        aria-hidden="true"
-        className="grid h-7 w-7 place-items-center rounded-md bg-ink-800 text-bone-50 transition-colors group-hover:bg-lime-500 group-hover:text-ink-800"
+      <svg
+        viewBox="0 0 380 90"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="hierarchy"
+        className="h-8 w-auto"
+        fill="none"
       >
-        <svg viewBox="0 0 16 16" className="h-4 w-4" fill="currentColor" aria-hidden>
-          <rect x="2" y="2" width="12" height="2.5" rx="0.5" />
-          <rect x="2" y="6.75" width="8" height="2.5" rx="0.5" />
-          <rect x="2" y="11.5" width="5" height="2.5" rx="0.5" />
-        </svg>
-      </span>
-      <span className="font-semibold tracking-tightest text-ink-800">Hierarchy</span>
+        <text
+          x="0"
+          y="65"
+          fontFamily="var(--font-geist-sans), Geist, -apple-system, system-ui, sans-serif"
+          fontSize="60"
+          fontWeight="700"
+          fill="#0F0F12"
+          letterSpacing="-2.7"
+        >
+          hierarchy
+        </text>
+        <rect x="0" y="73" width="346" height="9" fill="#C4F542" />
+      </svg>
     </Link>
   );
 }
+
+// logo-tagline: wordmark + "WEB AGENCY · MX" — usado en footer
+export function LogoTagline({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/"
+      aria-label="Hierarchy Web Agency — Inicio"
+      className={`inline-flex items-center ${className}`}
+    >
+      <svg
+        viewBox="0 0 380 130"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="hierarchy web agency"
+        className="h-12 w-auto"
+        fill="none"
+      >
+        <text
+          x="0"
+          y="65"
+          fontFamily="var(--font-geist-sans), Geist, -apple-system, system-ui, sans-serif"
+          fontSize="60"
+          fontWeight="700"
+          fill="#0F0F12"
+          letterSpacing="-2.7"
+        >
+          hierarchy
+        </text>
+        <rect x="0" y="73" width="346" height="9" fill="#C4F542" />
+        <text
+          x="0"
+          y="115"
+          fontFamily="var(--font-geist-sans), Geist, -apple-system, system-ui, sans-serif"
+          fontSize="20"
+          fontWeight="500"
+          fill="#64748B"
+          letterSpacing="0.05em"
+        >
+          WEB AGENCY · MX
+        </text>
+      </svg>
+    </Link>
+  );
+}
+
+// Alias default: Navbar usa LogoPrimary
+export { LogoPrimary as Logo };
