@@ -34,7 +34,7 @@ export function Hero({
         <h1
           className={`h-display animate-slide-up ${
             isHome
-              ? "mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-6xl lg:text-[68px]"
+              ? "mt-5 text-4xl leading-[1.1] sm:text-5xl md:text-5xl lg:text-6xl xl:text-[68px]"
               : "mt-5 text-balance text-3xl leading-[1.1] sm:text-4xl md:text-5xl"
           }`}
           style={{ animationDelay: "60ms" }}
