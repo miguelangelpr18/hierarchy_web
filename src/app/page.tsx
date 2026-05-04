@@ -77,7 +77,7 @@ export default function HomePage() {
         eyebrow="Agencia web · MTY, México"
         headline={
           <>
-            <span className="block">Tu negocio en Google.</span>
+            <span className="relative z-10 block">Tu negocio en Google.</span>
             <span className="block">
               Tu sitio listo en{" "}
               <span className="bg-lime-500 px-1 text-ink-800">una semana.</span>
